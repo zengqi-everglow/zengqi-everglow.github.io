@@ -4,33 +4,8 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+已发表论文：<br>
+1.刘冲、曾琪*、刘莉亚，金融强监管、存贷长期化与企业短债长用.《经济研究》，2023年第10期。<br>
+2.曾琪、刘雨婷，数字经济时代金融风险传导新特征——以硅谷银行破产事件为例.《中国社会科学内部文稿》，2023年第4期。（一级期刊，类比《人民日报（理论版）》）<br>
+3.项后军、高鹏飞、曾琪，银行风险承担渠道、流动性囤积与货币政策传导的“梗阻效应”研究.《国际金融研究》，2023年第1期。<br>
+4.项后军、曾琪*，期限错配、流动性创造与银行脆弱性.《财贸经济》（封面论文），2019年第8期。
